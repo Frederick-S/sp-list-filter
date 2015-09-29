@@ -1,6 +1,6 @@
 {
   "name": "sp-list-filter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Looks through SharePoint lists under web and return an array of lists that pass the truth test.",
   "main": "index.js",
   "scripts": {

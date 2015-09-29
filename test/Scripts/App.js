@@ -70,7 +70,7 @@
 	};
 
 	listFilter(options, function (lists) {
-	    var html = '<p>The "Custom" lists under host web are:</p>';
+	    var html = '<p>The lists based on "Custom" list template under host web are:</p>';
 	    html += '<ul>';
 
 	    for (var i = 0, length = lists.length; i < length; i++) {
@@ -92,6 +92,16 @@
 	var each = __webpack_require__(2);
 	var contextHelper = __webpack_require__(3);
 
+	var isEmpty = function (obj) {
+	    for (var key in obj) {
+	        if (obj.hasOwnProperty(key)) {
+	            return false;
+	        }
+	    }
+
+	    return true;
+	}
+
 	module.exports = function (options, done, error) {
 	    var contextWrapper = contextHelper(options.webUrl, options.useAppContextSite);
 	    var clientContext = contextWrapper.clientContext;
@@ -108,6 +118,10 @@
 	                if (filters(list)) {
 	                    listCollection.push(list);
 	                }
+	            });
+	        } else if (isEmpty(filters)) {
+	            each(lists, function (list) {
+	                listCollection.push(list);
 	            });
 	        } else {
 	            each(lists, function (list) {

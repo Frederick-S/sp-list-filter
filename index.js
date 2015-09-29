@@ -1,6 +1,16 @@
 var each = require('sp-each');
 var contextHelper = require('sp-context-helper');
 
+var isEmpty = function (obj) {
+    for (var key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
 module.exports = function (options, done, error) {
     var contextWrapper = contextHelper(options.webUrl, options.useAppContextSite);
     var clientContext = contextWrapper.clientContext;
@@ -17,6 +27,10 @@ module.exports = function (options, done, error) {
                 if (filters(list)) {
                     listCollection.push(list);
                 }
+            });
+        } else if (isEmpty(filters)) {
+            each(lists, function (list) {
+                listCollection.push(list);
             });
         } else {
             each(lists, function (list) {

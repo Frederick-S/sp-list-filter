@@ -1,0 +1,26 @@
+{
+  "name": "sp-list-filter",
+  "version": "0.0.1",
+  "description": "Looks through SharePoint lists under web and return an array of lists that pass the truth test.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frederick-S/sp-list-filter.git"
+  },
+  "keywords": [
+    "SharePoint"
+  ],
+  "author": "Frederick-S",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Frederick-S/sp-list-filter/issues"
+  },
+  "homepage": "https://github.com/Frederick-S/sp-list-filter#readme",
+  "dependencies": {
+    "sp-context-helper": "0.0.4",
+    "sp-each": "0.0.5"
+  }
+}

@@ -14,7 +14,7 @@ var options = {
     'webUrl': 'web url',
     'useAppContextSite': false,
     'filters': {
-        'baseTemplate': 100
+        'baseTemplate': 100 // Or baseType
     }
 };
 

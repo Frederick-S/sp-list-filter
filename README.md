@@ -1,4 +1,6 @@
 # sp-list-filter
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Frederick-S/sp-list-filter.svg)](https://greenkeeper.io/)
 Looks through SharePoint lists under web and return an array of lists that pass the truth test.
 
 ## Installation
